@@ -7,7 +7,7 @@
         <h2 class="text-center mt-5 mb-3">Symfony Project Manager</h2>
         <div class="card">
             <div class="card-header">
-                <a class="btn btn-outline-primary" href="{{ path('project_new') }}"> 
+                <a class="btn btn-outline-primary" href="{{ path('app_project_new') }}"> 
                     Create New Project 
                 </a>
             </div>
@@ -27,15 +27,15 @@
                         <td>{{ project.createdAt ? project.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                         <td>{{ project.updatedAt ? project.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                         <td>
-                            <form method="post" action="{{ path('project_delete', {'id': project.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                            <form method="post" action="{{ path('app_project_delete', {'id': project.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
                                 <a
                                     class="btn btn-outline-info"
-                                    href="{{ path('project_show', {'id': project.id}) }}">
+                                    href="{{ path('app_project_show', {'id': project.id}) }}">
                                     Show
                                 </a>
                                 <a
                                     class="btn btn-outline-success"
-                                    href="{{ path('project_edit', {'id': project.id}) }}">
+                                    href="{{ path('app_project_edit', {'id': project.id}) }}">
                                     Edit
                                 </a>
  
